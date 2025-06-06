@@ -46,14 +46,14 @@ public class DriverFactory {
 
 			break;
 			default:
-				System.out.println("Please pass the right browser");
+				System.out.println("Please pass the right browser name");
 				break;
 			
 		}
 		
 		getDriver().manage().window().maximize();
 		getDriver().manage().deleteAllCookies();
-		getDriver().get(prop.getProperty("url"));
+		getDriver().get(prop.getProperty("url").trim());
 		return getDriver();
 	}
 	
